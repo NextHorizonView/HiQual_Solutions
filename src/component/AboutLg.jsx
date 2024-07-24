@@ -10,10 +10,10 @@ import nextImg from '../assets/next.png'
 import appImg from '../assets/mobile-preview.png'
 import webImg from '../assets/web-1.png'
 
-const AboutLg = () => {
+const AboutLg = ({ scrollToElement }) => {
     return (
-        <div className='flex w-full h-full gap-24'>
-            <div className='grid w-full grid-rows-2 gap-8 min-w-[80vw]'>
+        <div className='flex w-full h-full gap-24 min-w-[200vw]'>
+            <div className='grid w-full grid-rows-2 gap-8 '>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='w-[36%] h-full bg-white p-12 rounded-[50px]'>
                         <p className='text-4xl font-bold text-left'>HiQual <span className='text-[#898989] text-5xl'><br />Solutions</span></p>
@@ -21,7 +21,7 @@ const AboutLg = () => {
                     <div className='w-[28%] h-full bg-white flex justify-center items-center p-10 rounded-[50px]'>
                         <img src={logoImg} />
                     </div>
-                    <div className='w-[36%] h-full py-4 pr-4 bg-white rounded-[50px] pl-8 rounded-[50px]'>
+                    <div className='w-[36%] h-full py-4 pr-4 bg-white pl-8 rounded-[50px]'>
                         <FontAwesomeIcon icon={faSun} />
                         <p className='font-semibold text-[#333333] text-xl'>Mumbai-based tech service provider  specializes in software, app, CRM, and website development.</p>
                         <div className='flex justify-between mt-20'>
@@ -35,15 +35,25 @@ const AboutLg = () => {
 
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='w-[36%] h-full bg-white p-2 flex justify-center rounded-[50px]'>
-                        <div className='w-fit'>
+                        <div className='relative w-fit'>
                             <img src={appImg} className='object-contain max-h-56' />
-                            <p className='inline-block text-xl font-bold'>Mobile App</p>
+                            <div className='relative flex items-center justify-between'>
+                                <p className='inline-block text-xl font-bold'>Mobile App</p>
+                                <div className='flex items-center justify-center p-2 text-base bg-black rounded-full cursor-pointer' onClick={() => scrollToElement('mobile-projects')}>
+                                    <FontAwesomeIcon color='#ffffff' icon={faArrowRight} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='w-[36%] h-full bg-white p-2 flex justify-center rounded-[50px]'>
                         <div className='w-fit'>
                             <img src={webImg} className='object-contain max-h-56' />
-                            <p className='inline-block text-xl font-bold'>Website Project</p>
+                            <div className='relative flex items-center justify-between'>
+                                <p className='inline-block text-xl font-bold'>Website Projects</p>
+                                <div className='flex items-center justify-center p-2 text-base bg-black rounded-full cursor-pointer' onClick={() => scrollToElement('website-projects')}>
+                                    <FontAwesomeIcon color='#ffffff' icon={faArrowRight} />
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='flex flex-col w-[28%] justify-between bg-white rounded-[50px] py-4 pr-8 pl-8'>
@@ -57,7 +67,7 @@ const AboutLg = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid w-full grid-rows-2 gap-8 min-w-[90vw]'>
+            <div className='grid w-full grid-rows-2 gap-8'>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='grid grid-cols-2 gap-4 p-8 xl:pl-16 w-[37%] bg-white rounded-[50px]'>
                         <div className='flex flex-col'>
