@@ -1,14 +1,12 @@
 import React from 'react'
 import logoImg from '../assets/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faGreaterThan, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faSun } from '@fortawesome/free-solid-svg-icons'
 import bulletImg from '../assets/bullet.png'
 import reactImg from '../assets/react.png'
 import nodeImg from '../assets/node.png'
 import mongoImg from '../assets/mongo.png'
 import nextImg from '../assets/next.png'
-import { appData, webData } from '../lib/ProjectsData'
-import ProjectsCard from './ProjectsCard'
 
 const About = () => {
     return (
@@ -16,10 +14,10 @@ const About = () => {
             <div className='grid grid-cols-1 gap-3'>
                 <div className='flex gap-4'>
                     <div className='px-5 sm:px-8 pt-9 sm:pt-11 pb-11 sm:pb-14 mt-5 bg-white w-[125%] rounded-2xl'>
-                        <p className='text-base font-bold text-left sm:w-[70%] sm:text-2xl md:text-4xl'>HiQual <span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'><br />Solutions,</span></p>
+                        <p className='text-base font-bold text-left sm:w-[70%] sm:text-2xl md:text-4xl'>HiQual <span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'><br />Solutions</span></p>
                     </div>
                     <div className='flex items-center justify-center w-full px-5 mt-5 bg-white rounded-2xl'>
-                        <img src={logoImg} className='sm:scale-125 md:scale-150' />
+                        <img src={logoImg} className='sm:scale-75' />
                     </div>
                 </div>
 
@@ -68,10 +66,10 @@ const About = () => {
                     <div className='w-full p-4 bg-white rounded-2xl'>
                         <p className='text-xl font-medium text-left sm:w-[70%] sm:text-2xl md:text-4xl'>What<span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'> I do</span></p>
                         <div className='flex flex-col gap-2 mt-3'>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>CRM Solutions</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>App Development</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Website Development</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Software Solutions</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-1 font-black text-black '><img src={bulletImg} className='' /></span>CRM Solutions</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>App Development</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Website Development</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Software Solutions</p>
                         </div>
                     </div>
                 </div>
@@ -101,20 +99,6 @@ const About = () => {
                             <FontAwesomeIcon color='#898989' icon={faArrowRight} />
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className='mt-16'>
-                <p className='ml-6 text-xl sm:text-2xl md:text-4xl font-medium text-[#141313]'>Mobile Applications</p>
-                <div className='flex flex-col gap-4 mt-4'>
-                    {appData.map((data, index) => (<ProjectsCard key={index} name={data.name} img={data.img} description={data.description} />))}
-                </div>
-            </div>
-
-            <div className='mt-16'>
-                <p className='ml-6 text-xl sm:text-2xl md:text-4xl font-medium text-[#141313]'>Website Projects</p>
-                <div className='flex flex-col gap-4 mt-4'>
-                    {webData.map((data, index) => (<ProjectsCard key={index} name={data.name} img={data.img} description={data.description} />))}
                 </div>
             </div>
         </div>
