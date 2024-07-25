@@ -8,7 +8,7 @@ import nodeImg from '../assets/node.png'
 import mongoImg from '../assets/mongo.png'
 import nextImg from '../assets/next.png'
 import appImg from '../assets/mobile-preview.png'
-import webImg from '../assets/web-1.png'
+import webImg from '../assets/web-2.png'
 
 const AboutLg = ({ scrollToElement }) => {
     return (
@@ -21,37 +21,38 @@ const AboutLg = ({ scrollToElement }) => {
                     <div className='w-[28%] h-full bg-white flex justify-center items-center p-10 rounded-[50px]'>
                         <img src={logoImg} />
                     </div>
-                    <div className='w-[36%] h-full py-4 pr-4 bg-white pl-8 rounded-[50px]'>
-                        <FontAwesomeIcon icon={faSun} />
-                        <p className='font-semibold text-[#333333] text-xl'>Mumbai-based tech service provider  specializes in software, app, CRM, and website development.</p>
-                        <div className='flex justify-between mt-20'>
-                            <p className='text-[#A1A1A1] font-semibold text-xl'>About Me</p>
-                            <div className='px-2 border-[1px] border-[#898989] rounded-full text-base flex justify-center items-center'>
+                    <div className='flex flex-col w-[36%] justify-between bg-white rounded-[50px] py-4 pr-8 pl-8'>
+                        <div>
+                            <FontAwesomeIcon icon={faSun} />
+                            <p className='font-semibold text-[#333333] text-xl'>Mumbai-based tech service provider  specializes in software, app, CRM, and website development.</p>
+                        </div>
+                        <div className='flex justify-between mt-16'>
+                            <p className='text-[#A1A1A1] font-semibold text-xl'>All Products</p>
+                            <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-lg md:text-xl flex justify-center items-center'>
                                 <FontAwesomeIcon color='#898989' icon={faArrowRight} />
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
-                    <div className='w-[36%] h-full bg-white p-2 flex justify-center rounded-[50px]'>
-                        <div className='relative w-fit'>
-                            <img src={appImg} className='object-contain max-h-56' />
-                            <div className='relative flex items-center justify-between'>
-                                <p className='inline-block text-xl font-bold'>Mobile App</p>
-                                <div className='flex items-center justify-center p-2 text-base bg-black rounded-full cursor-pointer' onClick={() => scrollToElement('mobile-projects')}>
-                                    <FontAwesomeIcon color='#ffffff' icon={faArrowRight} />
+                    <div className='w-[36%] h-full flex gap-8 flex-col bg-white bg-no-repeat bg-center bg-cover  rounded-[50px] relative group hover:bg-opacity-5' style={{ backgroundImage: `url(${appImg})`, }}>
+                        <div className='absolute top-0 bottom-0 left-0 right-0 rounded-[50px] flex items-center justify-center gap-2 opacity-0 bg-black/60 group-hover:opacity-100 transition-all duration-500 ease-in-out'>
+                            <div className='flex flex-col items-center transition-all duration-500 ease-in-out translate-y-8 group-hover:translate-y-0'>
+                                <p className='inline-block text-2xl font-bold text-center text-white'>Mobile App</p>
+                                <div className='flex items-center justify-center p-2 text-base bg-white rounded-full cursor-pointer w-fit' onClick={() => scrollToElement('mobile-projects')}>
+                                    <FontAwesomeIcon color='#000000' icon={faArrowRight} />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='w-[36%] h-full bg-white p-2 flex justify-center rounded-[50px]'>
-                        <div className='w-fit'>
-                            <img src={webImg} className='object-contain max-h-56' />
-                            <div className='relative flex items-center justify-between'>
-                                <p className='inline-block text-xl font-bold'>Website Projects</p>
-                                <div className='flex items-center justify-center p-2 text-base bg-black rounded-full cursor-pointer' onClick={() => scrollToElement('website-projects')}>
-                                    <FontAwesomeIcon color='#ffffff' icon={faArrowRight} />
+                    <div className='w-[36%] h-full flex gap-8 flex-col bg-white bg-no-repeat bg-center bg-cover  rounded-[50px] relative group hover:bg-opacity-5' style={{ backgroundImage: `url(${webImg})`, }}>
+                        <div className='absolute top-0 bottom-0 left-0 right-0 rounded-[50px] flex items-center justify-center gap-2 opacity-0 bg-black/60 group-hover:opacity-100 transition-all duration-500 ease-in-out'>
+                            <div className='flex flex-col items-center transition-all duration-500 ease-in-out translate-y-8 group-hover:translate-y-0'>
+                                <p className='inline-block text-2xl font-bold text-center text-white'>Website Projects</p>
+                                <div className='flex items-center justify-center p-2 text-base bg-white rounded-full cursor-pointer w-fit' onClick={() => scrollToElement('website-projects')}>
+                                    <FontAwesomeIcon color='#000000' icon={faArrowRight} />
                                 </div>
                             </div>
                         </div>

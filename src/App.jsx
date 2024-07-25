@@ -75,7 +75,7 @@ export default function App() {
         <Projects />
         <GetInTouch />
       </div>
-      <div className="hidden w-screen h-screen lg:flex max-h-[900px]">
+      <div className="hidden w-screen h-screen lg:flex max-h-[1000px]">
         <div
           ref={scrollContainerRef}
           className="flex items-center bg-[#EDF2F6] gap-20 lg:p-8 xl:p-14 overflow-x-auto hide-scrollbar"
