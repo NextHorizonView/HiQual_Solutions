@@ -3,10 +3,10 @@ import logoImg from '../assets/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faSun } from '@fortawesome/free-solid-svg-icons'
 import bulletImg from '../assets/bullet.png'
-import reactImg from '../assets/react.png'
-import nodeImg from '../assets/node.png'
-import mongoImg from '../assets/mongo.png'
-import nextImg from '../assets/next.png'
+import reactImg from '../assets/reactjs.svg'
+import nodeImg from '../assets/nodejs.svg'
+import mongoImg from '../assets/mongo.svg'
+import nextImg from '../assets/nextjs.svg'
 
 const About = () => {
     return (
@@ -76,10 +76,10 @@ const About = () => {
                 <div className='flex flex-col justify-between py-4 bg-white rounded-lg sm:py-6 sm:pr-6 md:pr-8 md:pl-8 px-7'>
                     <p className='text-xl font-medium sm:text-xl md:text-2xl'>Tools <span className='text-[#898989]'>I use</span></p>
                     <div className='flex flex-wrap gap-4 mt-6 sm:gap-12 md:gap-16 sm:mt-12 md:mt-20'>
-                        <img className='sm:scale-125 md:scale-150' src={mongoImg} alt='mongodb' />
-                        <img className='sm:scale-125 md:scale-150' src={reactImg} alt='react' />
-                        <img className='sm:scale-125 md:scale-150' src={nodeImg} alt='node' />
-                        <img className='sm:scale-125 md:scale-150' src={nextImg} alt='next' />
+                        <img className='h-8 sm:h-10 md:h-12' src={mongoImg} alt='mongodb' />
+                        <img className='h-6 sm:h-8 md:h-10' src={reactImg} alt='react' />
+                        <img className='h-8 sm:h-10 md:h-12' src={nodeImg} alt='node' />
+                        <img className='h-6 sm:h-8 md:h-10' src={nextImg} alt='next' />
                     </div>
                 </div>
                 <div className='flex flex-col justify-between py-4 pr-4 bg-white rounded-lg sm:py-6 sm:pr-6 md:pr-8 md:pl-8 pl-7'>
