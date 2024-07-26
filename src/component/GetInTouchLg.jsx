@@ -18,7 +18,7 @@ const GetInTouchLg = () => {
                     <a target="_blank" href='https://www.instagram.com/hiqualsolutions/'><img src={instaIcon} className='3xl:scale-125 4xl:scale-150' /></a>
                     <a target="_blank" href='https://www.linkedin.com/in/mohammadanaschougle/'><img className='3xl:scale-125 4xl:scale-150' src={linkedInIcon} /></a>
                     {/* <a><img src={twitterIcon} /></a> */}
-                    <a target="_blank" href='mohammadanas@hiqualsolutions.com'><img className='3xl:scale-125 4xl:scale-150' src={wwwIcon} /></a>
+                    <a target="_blank" href='https://www.mohammadanas@hiqualsolutions.com'><img className='3xl:scale-125 4xl:scale-150' src={wwwIcon} /></a>
                 </div>
             </div>
 
