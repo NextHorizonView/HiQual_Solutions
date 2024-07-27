@@ -22,7 +22,7 @@ const GetInTouch = () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center gap-2 mt-2 bg-white rounded-2xl'>
+            <div className='flex items-center justify-center gap-2 py-2 mt-2 bg-white rounded-2xl'>
                 <p className='font-semibold text-[#A1A1A1] text-lg sm:text-lg md:text-xl'>Get In Touch</p>
                 <div className='border-[1px] border-[#898989] flex justify-center items-center rounded-full text-xl  h-8 w-8'>
                     <a target='_blank' className='flex items-center justify-center w-full h-full' href='https://calendly.com/chougleanas32/targeted-growth-marketing-web-development'><FontAwesomeIcon color='#898989' icon={faArrowRight} /></a>
