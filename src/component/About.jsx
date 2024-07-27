@@ -135,7 +135,12 @@ const About = ({ scrollToElement }) => {
                     </div>
                 </div>
                 <div className='flex flex-col justify-between py-4 bg-white rounded-lg sm:py-6 sm:pr-6 md:pr-8 md:pl-8 px-7'>
-                    <p className='text-xl font-medium sm:text-xl md:text-2xl'>Tools <span className='text-[#898989]'>I use</span></p>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className='text-xl font-medium sm:text-xl md:text-2xl'>Tools <span className='text-[#898989]'>I use</span></motion.p>
                     <div className='flex flex-wrap gap-4 mt-6 sm:gap-12 md:gap-16 sm:mt-12 md:mt-20'>
                         <motion.img
                             initial={{ opacity: 0, scale: 0 }}

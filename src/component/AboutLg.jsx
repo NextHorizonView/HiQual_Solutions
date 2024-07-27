@@ -9,6 +9,7 @@ import mongoImg from '../assets/mongo.svg'
 import nextImg from '../assets/nextjs.svg'
 import appImg from '../assets/mobile-app-3.png'
 import webImg from '../assets/web-2.png'
+import { motion } from "framer-motion"
 
 const AboutLg = ({ scrollToElement }) => {
     return (
@@ -16,10 +17,15 @@ const AboutLg = ({ scrollToElement }) => {
             <div className='grid w-full grid-rows-2 gap-8 '>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='w-[36%] h-full bg-white p-12 rounded-[50px]'>
-                        <p className='text-4xl font-bold text-left 3xl:text-5xl 4xl:text-6xl'>HiQual <span className='text-[#898989] text-5xl'><br />Solutions</span></p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='text-4xl font-bold text-left 3xl:text-5xl 4xl:text-6xl'>HiQual <span className='text-[#898989] text-5xl'><br />Solutions</span></motion.p>
                     </div>
                     <div className='w-[28%] h-full bg-white flex justify-center items-center p-10 rounded-[50px]'>
-                        <img src={logoImg} />
+                        <motion.img initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} src={logoImg} />
                     </div>
                     <div className='flex flex-col w-[36%] justify-between bg-white rounded-[50px] py-4 3xl:py-6  4xl:py-8 pr-8 pl-8'>
                         <div>
@@ -58,7 +64,12 @@ const AboutLg = ({ scrollToElement }) => {
                         </div>
                     </div>
                     <div className='flex flex-col w-[28%] justify-between bg-white rounded-[50px] py-4 3xl:py-6  4xl:py-8 pr-8 pl-8'>
-                        <p className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl'>See my latest <br /><span className='text-[#898989]'>work</span></p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl'>See my latest <br /><span className='text-[#898989]'>work</span></motion.p>
                         <div className='flex items-center justify-between mt-16'>
                             <p className='text-[#A1A1A1] font-semibold text-3xl 2xl:text-4xl'>All Projects</p>
                             <div onClick={() => scrollToElement('mobile-projects')} className='border-[1px] cursor-pointer p-3 border-[#898989] rounded-full text-xl flex justify-center items-center h-8 w-8'>
@@ -71,36 +82,86 @@ const AboutLg = ({ scrollToElement }) => {
             <div className='grid w-full grid-rows-2 gap-8'>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='grid grid-cols-2 gap-4 py-4 3xl:py-6  4xl:py-8 pr-8 pl-8 w-[50%] bg-white rounded-[50px]'>
-                        <div className='flex flex-col'>
+                        <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='flex flex-col'>
                             <p className='font-bold text-left w-[70%] text-6xl 2xl:text-[4rem] 3xl:text-[5rem]'>2<span className='text-[#898989]'>+</span></p>
                             <p className='text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-[#A1A1A1]'>Years Of Experience</p>
-                        </div>
-                        <div className='flex flex-col'>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className='flex flex-col'>
                             <p className='font-bold text-left sm:w-[70%] text-6xl 2xl:text-[4rem] 3xl:text-[5rem]'>30<span className='text-[#898989]'>+</span></p>
                             <p className='text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-[#A1A1A1]'>Clients served</p>
-                        </div>
-                        <div className='flex flex-col'>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className='flex flex-col'>
                             <p className='font-bold text-left sm:w-[70%] text-6xl 2xl:text-[4rem] 3xl:text-[5rem]'>4.9<span className='text-[#898989]'>+</span></p>
                             <p className='text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-[#A1A1A1]'>Average Rating</p>
-                        </div>
-                        <div className='flex flex-col'>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className='flex flex-col'>
                             <p className='font-bold text-left sm:w-[70%] text-6xl 2xl:text-[4rem] 3xl:text-[5rem]'>15</p>
                             <p className='text-xs xl:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl text-[#A1A1A1]'>Case studies</p>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className='w-[50%] py-4 3xl:py-6  4xl:py-8 pr-8 pl-8 bg-white rounded-[50px]'>
-                        <p className='font-medium text-left w-[70%] text-4xl 3xl:text-5xl 4xl:text-6xl'>What<span className='text-[#898989]'> I do</span></p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='font-medium text-left w-[70%] text-4xl 3xl:text-5xl 4xl:text-6xl'>What<span className='text-[#898989]'> I do</span></motion.p>
                         <div className='flex flex-col justify-between gap-2 mt-6 2xl:mt-8 2xl:gap-3 3xl:gap-4'>
-                            <p className='text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>CRM Solutions</p>
-                            <p className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>App Development</p>
-                            <p className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Website Development</p>
-                            <p className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Software Solutions</p>
+                            <motion.p
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: '-10px' }}
+                                transition={{ duration: 0.5 }}
+                                className='text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>CRM Solutions</motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: '-10px' }}
+                                transition={{ duration: 0.5 }}
+                                className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>App Development</motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: '-10px' }}
+                                transition={{ duration: 0.5 }}
+                                className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Website Development</motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: '-10px' }}
+                                transition={{ duration: 0.5 }}
+                                className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Software Solutions</motion.p>
                         </div>
                     </div>
                 </div>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='w-[50%] flex flex-col justify-between bg-white rounded-[50px] py-4 3xl:py-6  4xl:py-8 pr-8 pl-8'>
-                        <p className='font-medium text-left w-[70%] text-4xl 3xl:text-5xl 4xl:text-6xl'>Let's Work <span className='text-[#898989]'>Together</span></p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='font-medium text-left w-[70%] text-4xl 3xl:text-5xl 4xl:text-6xl'>Let's Work <span className='text-[#898989]'>Together</span></motion.p>
                         <div className='flex justify-between mt-16'>
                             <p className='text-[#A1A1A1] font-semibold text-3xl 2xl:text-4xl'>Get In Touch</p>
                             <div className='border-[1px] border-[#898989] rounded-full text-xl  h-8 w-8'>
@@ -109,12 +170,37 @@ const AboutLg = ({ scrollToElement }) => {
                         </div>
                     </div>
                     <div className='flex flex-col w-[50%] justify-between py-4 3xl:py-6  4xl:py-8 pr-8 pl-8 bg-white rounded-[50px]'>
-                        <p className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl '>Tools <span className='text-[#898989]'>I use</span></p>
+                        <motion.p
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5 }}
+                            className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl '>Tools <span className='text-[#898989]'>I use</span></motion.p>
                         <div className='flex flex-wrap items-center gap-8'>
-                            <img className='h-16 2xl:h-20 4xl:h-24' src={mongoImg} alt='mongodb' />
-                            <img className='h-12 4xl:h-20' src={reactImg} alt='react' />
-                            <img className='h-16 2xl:h-20 4xl:h-24' src={nodeImg} alt='node' />
-                            <img className='h-12 4xl:h-20' src={nextImg} alt='next' />
+                            <motion.img
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className='h-16 2xl:h-20 4xl:h-24' src={mongoImg} alt='mongodb' />
+                            <motion.img
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                className='h-12 4xl:h-20' src={reactImg} alt='react' />
+                            <motion.img
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.6 }}
+                                className='h-16 2xl:h-20 4xl:h-24' src={nodeImg} alt='node' />
+                            <motion.img
+                                initial={{ opacity: 0, scale: 0 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.9 }}
+                                className='h-12 4xl:h-20' src={nextImg} alt='next' />
                         </div>
                     </div>
                     {/* <div className='w-[50%] flex flex-col justify-between bg-white rounded-[50px] py-4 3xl:py-6  4xl:py-8 pr-8 pl-8'>
