@@ -8,7 +8,7 @@ import nodeImg from '../assets/nodejs.svg'
 import mongoImg from '../assets/mongo.svg'
 import nextImg from '../assets/nextjs.svg'
 
-const About = () => {
+const About = ({ scrollToElement }) => {
     return (
         <div className='w-full'>
             <div className='grid grid-cols-1 gap-3'>
@@ -26,7 +26,11 @@ const About = () => {
                     <p className='font-semibold text-[#333333] text-base sm:text-xl md:text-2xl'>Mumbai-based tech service provider  specializes in software, app, CRM, and website development.</p>
                     <div className='flex justify-between mt-8 sm:mt-14 md:mt-20'>
                         <p className='text-[#A1A1A1] text-lg font-semibold sm:text-xl md:text-2xl'>About Me</p>
-                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-base flex justify-center items-center'>
+                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-base flex justify-center items-center cursor-pointer' onClick={() => {
+                            scrollToElement('get-in-touch-sm')
+                            console.log('clicked')
+                        }
+                        }>
                             <FontAwesomeIcon color='#898989' icon={faArrowRight} />
                         </div>
                     </div>
@@ -35,8 +39,8 @@ const About = () => {
                 <div className='flex flex-col justify-between py-4 pr-4 bg-white rounded-lg sm:py-6 sm:pr-6 md:pr-8 md:pl-8 pl-7'>
                     <p className='text-xl font-medium sm:text-xl md:text-2xl'>See my latest <br /><span className='text-[#898989]'>work</span></p>
                     <div className='flex justify-between mt-16'>
-                        <p className='text-[#A1A1A1] text-lg font-semibold sm:text-xl md:text-2xl'>All Products</p>
-                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-lg md:text-xl flex justify-center items-center'>
+                        <p className='text-[#A1A1A1] text-lg font-semibold sm:text-xl md:text-2xl'>All Projects</p>
+                        <div onClick={() => scrollToElement('projects-sm')} className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-base flex justify-center items-center'>
                             <FontAwesomeIcon color='#898989' icon={faArrowRight} />
                         </div>
                     </div>
@@ -66,10 +70,10 @@ const About = () => {
                     <div className='w-full p-4 bg-white rounded-2xl'>
                         <p className='text-xl font-medium text-left sm:w-[70%] sm:text-2xl md:text-4xl'>What<span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'> I do</span></p>
                         <div className='flex flex-col gap-2 mt-3'>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-1 font-black text-black '><img src={bulletImg} className='' /></span>CRM Solutions</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>App Development</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Website Development</p>
-                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='text-[8px] text-black font-black mr-1'><img src={bulletImg} className='' /></span>Software Solutions</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-5 text-black font-black tracking-[-10px] arrow'>&gt;&gt;</span>CRM Solutions</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-5 text-black font-black tracking-[-10px] arrow'>&gt;&gt;</span>App Development</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-5 text-black font-black tracking-[-10px] arrow'>&gt;&gt;</span>Website Development</p>
+                            <p className='text-xs text-[#A1A1A1] font-bold flex items-center sm:text-sm md:text-lg'><span className='mr-5 text-black font-black tracking-[-10px] arrow'>&gt;&gt;</span>Software Solutions</p>
                         </div>
                     </div>
                 </div>
@@ -86,17 +90,8 @@ const About = () => {
                     <p className='text-xl font-medium sm:text-xl md:text-2xl'>Let's Work <span className='text-[#898989]'>Together</span></p>
                     <div className='flex justify-between mt-16'>
                         <p className='text-[#A1A1A1] text-lg font-semibold sm:text-xl md:text-2xl'>Get In Touch</p>
-                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-lg md:text-xl flex justify-center items-center'>
-                            <FontAwesomeIcon color='#898989' icon={faArrowRight} />
-                        </div>
-                    </div>
-                </div>
-                <div className='flex flex-col justify-between py-4 pr-4 bg-white rounded-lg sm:py-6 sm:pr-6 md:pr-8 md:pl-8 pl-7'>
-                    <p className='text-xl font-medium sm:text-xl md:text-2xl'>Services <span className='text-[#898989]'>I Offer</span></p>
-                    <div className='flex justify-between mt-16'>
-                        <p className='text-[#A1A1A1] text-lg font-semibold sm:text-xl md:text-2xl'>All Projects</p>
-                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-lg md:text-xl flex justify-center items-center'>
-                            <FontAwesomeIcon color='#898989' icon={faArrowRight} />
+                        <div className='px-2 border-[1px] border-[#898989] rounded-full text-xs sm:text-base flex justify-center items-center'>
+                            <a target='_blank' className='flex items-center justify-center' href='https://calendly.com/chougleanas32/targeted-growth-marketing-web-development'><FontAwesomeIcon color='#898989' icon={faArrowRight} /></a>
                         </div>
                     </div>
                 </div>

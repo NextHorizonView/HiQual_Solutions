@@ -9,8 +9,8 @@ import wwwIcon from '../assets/www.svg'
 
 const GetInTouchLg = () => {
     return (
-        <div className='min-w-[80vw] h-full flex flex-col justify-between'>
-            <div className='flex flex-col items-center w-full h-full gap-4 3xl:gap-8 p-16 bg-white rounded-[50px]'>
+        <div id='get-in-touch-lg' className='min-w-[80vw] h-full flex flex-col justify-between'>
+            <div className='flex flex-col items-center w-full h-full gap-4 3xl:gap-8 pt-16 bg-white rounded-[50px]'>
                 <img src={LogoImg} className='scale-75 3xl:scale-90 4xl:scale-100' />
                 <p className='font-bold text-center w-[70%] text-4xl 3xl:text-5xl 4xl:text-6xl'><span className='text-[#898989]'>HiQual Solutions,</span> a tech solution provider <span className='text-[#898989]'>in Mumbai.</span></p>
                 <p className='text-[#5B5B5B] text-center w-[70%] text-xl 3xl:text-2xl 4xl:text-3xl'>Mumbai-based tech innovators crafting bespoke software, mobile apps, CRM systems, and websites. Empowering businesses with cutting-edge digital solutions.</p>
@@ -22,10 +22,10 @@ const GetInTouchLg = () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-center gap-2 py-4 mt-4 bg-white rounded-full xl:py-8'>
+            <div className='flex items-center justify-center gap-2 py-2 mt-4 bg-white rounded-full xl:py-4'>
                 <p className='font-semibold text-[#A1A1A1] text-xl 3xl:text-2xl 4xl:text-3xl'>Get In Touch</p>
-                <div className='px-3 py-[2px] border-[1px] border-[#898989] rounded-full text-xs sm:text-base md:text-lg  flex justify-center items-center'>
-                    <FontAwesomeIcon color='#898989' icon={faArrowRight} />
+                <div className='border-[1px] border-[#898989] rounded-full text-xl  h-8 w-8'>
+                    <a target='_blank' className='flex items-center justify-center w-full h-full' href='https://calendly.com/chougleanas32/targeted-growth-marketing-web-development'><FontAwesomeIcon color='#898989' icon={faArrowRight} /></a>
                 </div>
             </div>
         </div>

@@ -39,3 +39,7 @@ a {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.arrow {
+  font-family: "Poppins", sans-serif;
+}
