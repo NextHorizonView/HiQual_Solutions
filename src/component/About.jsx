@@ -20,7 +20,7 @@ const About = ({ scrollToElement }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className='text-base font-bold text-left sm:w-[70%] sm:text-2xl md:text-4xl'>HiQual <span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'><br />Solutions</span></motion.p>
+                            className='text-base font-bold text-left sm:w-[70%] sm:text-2xl md:text-4xl'>IT <span className='text-[#898989] text-xl sm:text-3xl  md:text-5xl'><br />Services</span></motion.p>
                     </div>
                     <div className='flex items-center justify-center w-full px-5 mt-5 bg-white rounded-2xl'>
                         <motion.img initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}

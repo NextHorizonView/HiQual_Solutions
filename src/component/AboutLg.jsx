@@ -13,7 +13,7 @@ import { motion } from "framer-motion"
 
 const AboutLg = ({ scrollToElement }) => {
     return (
-        <div className='flex w-full h-full gap-24 min-w-[200vw]'>
+        <div className='flex w-full h-full gap-10 min-w-[200vw]'>
             <div className='grid w-full grid-rows-2 gap-8 '>
                 <div className='flex flex-shrink-0 w-full h-full gap-6'>
                     <div className='w-[36%] h-full bg-white p-12 rounded-[50px]'>
@@ -22,7 +22,7 @@ const AboutLg = ({ scrollToElement }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className='text-4xl font-bold text-left 3xl:text-5xl 4xl:text-6xl'>HiQual <span className='text-[#898989] text-5xl'><br />Solutions</span></motion.p>
+                            className='text-4xl font-bold text-left 3xl:text-5xl 4xl:text-6xl'>IT <span className='text-[#898989] text-5xl'><br />Services</span></motion.p>
                     </div>
                     <div className='w-[28%] h-full bg-white flex justify-center items-center p-10 rounded-[50px]'>
                         <motion.img initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} src={logoImg} />
