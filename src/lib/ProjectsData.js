@@ -17,7 +17,7 @@ export const appData = [
         img1: app1aImg,
         img2: app1bImg,
         description: 'A music streaming app, offering a vast library of songs and personalized playlists.',
-        name: 'Video/Music Streaming App',
+        name: 'Music Streaming App',
         para1: 'Our music streaming app project aimed to deliver an exceptional audio experience with a wide range of features. Users can stream music, create playlists, and discover new artists through personalized recommendations. The challenge was to ensure seamless playback and intuitive navigation.',
         para2: 'We implemented a robust backend using Node.js and Express, while the frontend was built with React Native for a smooth, native-like experience. Key features include offline listening, social sharing, and real-time lyrics. The app is optimized for both iOS and Android platforms.',
         technologies: 'React Native, Node.js, Express, MongoDB',
