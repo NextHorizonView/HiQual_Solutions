@@ -22,7 +22,7 @@ const AboutLg = ({ scrollToElement }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className='text-4xl font-bold text-left 3xl:text-5xl 4xl:text-6xl'>IT <span className='text-[#898989] text-5xl'><br />Services</span></motion.p>
+                            className='text-sm text-left xl:text-base'>Welcome to HiQual Solutions, your premier destination for top-notch services. At HiQual Solutions, we pride ourselves on delivering high-quality solutions tailored to your unique needs. Our team of experts specializes in a diverse range of skills, ensuring that every project we undertake meets the highest standards of excellence.</motion.p>
                     </div>
                     <div className='w-[28%] h-full bg-white flex justify-center items-center p-10 rounded-[50px]'>
                         <motion.img initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} src={logoImg} />
@@ -33,7 +33,7 @@ const AboutLg = ({ scrollToElement }) => {
                             <p className='font-semibold text-[#333333] text-xl 2xl:text-2xl 3xl:text-3xl mt-2'>Mumbai-based tech service provider  specializes in software, app, CRM, and website development.</p>
                         </div>
                         <div className='flex justify-between mt-16'>
-                            <p className='text-[#A1A1A1] font-semibold text-3xl 2xl:text-4xl'>About Me</p>
+                            <p className='text-[#A1A1A1] font-semibold text-3xl 2xl:text-4xl'>About Us</p>
                             <div onClick={() => scrollToElement('get-in-touch-lg')} className='border-[1px] border-[#898989] cursor-pointer rounded-full text-xl flex justify-center items-center h-8 w-8'>
                                 <FontAwesomeIcon color='#898989' icon={faArrowRight} />
                             </div>
@@ -132,7 +132,7 @@ const AboutLg = ({ scrollToElement }) => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, margin: '-10px' }}
                                 transition={{ duration: 0.5 }}
-                                className='text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>CRM Solutions</motion.p>
+                                className='text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Software Solutions</motion.p>
                             <motion.p
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -150,7 +150,7 @@ const AboutLg = ({ scrollToElement }) => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, margin: '-10px' }}
                                 transition={{ duration: 0.5 }}
-                                className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>Software Solutions</motion.p>
+                                className=' text-[#A1A1A1] font-bold flex items-center text-lg 2xl:text-2xl'><span className='mr-5 text-black font-black tracking-[-17px] arrow'>&gt;&gt;</span>CRM Solutions</motion.p>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@ const AboutLg = ({ scrollToElement }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl '>Tools <span className='text-[#898989]'>I use</span></motion.p>
+                            className='text-4xl font-medium 3xl:text-5xl 4xl:text-6xl '>Tools <span className='text-[#898989]'>We use</span></motion.p>
                         <div className='flex flex-wrap items-center gap-8'>
                             <motion.img
                                 initial={{ opacity: 0, scale: 0 }}
